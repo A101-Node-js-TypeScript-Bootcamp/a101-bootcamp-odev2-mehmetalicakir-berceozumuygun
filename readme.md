@@ -5,7 +5,7 @@
     + JWT entegrasyonu  
     + JWT sign etmeden önce joi.js validasyon  
     + Trendyol markalar "GET" endpointi  
-        + Bu endpoint'e id ve name ile query params eklemek  
+        + Bu endpoint'e id veya name ile query params eklemek  
     + Trendyol kategoriler "GET" endpointi  
     + Trendyol single kategori "GET" endpointi  
     + Error-Handler entegrasyonu   
