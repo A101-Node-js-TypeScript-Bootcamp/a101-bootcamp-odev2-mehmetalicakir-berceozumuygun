@@ -1,10 +1,9 @@
 const trendyolServices = require("../services/trendyol");
 
 exports.getAllBrands = async (req, res) => {
-  let response = await trendyolServices.getAllBrands();
-  console.log(response);
+  const response = await trendyolServices.getAllBrands(); // API bağlantısının çekilmesini bekliyoruz
   res.send({
     status: true,
-    data: response.brands
+    data: response.brands // API içerisinde "brands" isimli bir dizide bulunduğu için orayı seçiyoruz
   });
 };
