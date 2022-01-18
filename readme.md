@@ -12,5 +12,41 @@
 ## Ödev Yapım Aşamaları  
 
 
+## API Kullanımı
+
+### Trendyol
+
+#### Tüm markaları getir
+
+```http
+  GET /api/platforms/trendyol/getAllBrands
+```
+
+#### Markayı getir
+
+```http
+  GET /api/platforms/trendyol/getBrand/${Marka Adı}
+```
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `name`      | `string` | **Gerekli**. İlgili markanın ismi |
+
+#### Tüm kategorileri getir
+
+```http
+  GET /api/platforms/trendyol/getAllCategories
+```
+#### Kategoriyi getir
+
+```http
+  GET /api/platforms/trendyol/getCategory/${id}
+```
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `number` | **Gerekli**. İlgili kategorinin idsi |
+
+
 ## Kaynaklar  
 
