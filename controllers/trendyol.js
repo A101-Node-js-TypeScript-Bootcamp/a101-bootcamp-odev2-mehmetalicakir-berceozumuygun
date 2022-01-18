@@ -16,3 +16,11 @@ exports.getBrand = async (req, res) => {
   });
 };
 
+
+exports.getAllCategories = async (req, res) => {
+  const response = await trendyolServices.getAllCategories(); // API bağlantısının çekilmesini bekliyoruz
+  res.send({
+    status: true,
+    data: response.categories 
+  });
+};

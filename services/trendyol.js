@@ -6,8 +6,14 @@ exports.getAllBrands = async () => {
     return response.data;
 }
 
+
 exports.getBrand = async (req,res) => {
     const name = encodeURI(`https://api.trendyol.com/sapigw/brands/by-name?name=${req}`);
     const response = await axios.get(name); //Axios modülü ile API'ye bağlantı sağlıyoruz.
+    return response.data;
+}
+
+exports.getAllCategories = async () => {
+    const response = await axios.get('https://api.trendyol.com/sapigw/product-categories'); //Axios modülü ile API'ye bağlantı sağlıyoruz.
     return response.data;
 }
