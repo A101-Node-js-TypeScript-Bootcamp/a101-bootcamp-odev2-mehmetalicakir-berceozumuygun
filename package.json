@@ -1,0 +1,23 @@
+{
+  "name": "a101-bootcamp-odev2-mehmetalicakir-berceozumuygun",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/A101-Node-js-TypeScript-Bootcamp/a101-bootcamp-odev2-mehmetalicakir-berceozumuygun.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/A101-Node-js-TypeScript-Bootcamp/a101-bootcamp-odev2-mehmetalicakir-berceozumuygun/issues"
+  },
+  "homepage": "https://github.com/A101-Node-js-TypeScript-Bootcamp/a101-bootcamp-odev2-mehmetalicakir-berceozumuygun#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "express": "^4.17.2"
+  }
+}
