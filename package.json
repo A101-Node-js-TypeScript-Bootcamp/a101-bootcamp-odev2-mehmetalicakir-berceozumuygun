@@ -21,6 +21,7 @@
     "express": "^4.17.2",
     "express-jwt": "^6.1.0",
     "joi": "^17.5.0",
+    "joi-jwt": "^1.0.1",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
     "url": "^0.11.0"
