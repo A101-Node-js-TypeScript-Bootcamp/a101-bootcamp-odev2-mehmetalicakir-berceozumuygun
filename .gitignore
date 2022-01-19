@@ -1,4 +1,5 @@
 node_modules
+<<<<<<< HEAD
 .vscode
 # Logs
 logs
@@ -104,3 +105,5 @@ dist
 
 # TernJS port file
 .tern-port
+=======
+>>>>>>> e66ce3e894f5698190c4606dc5fbaf5e84172947
