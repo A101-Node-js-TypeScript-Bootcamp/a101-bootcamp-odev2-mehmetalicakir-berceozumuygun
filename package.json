@@ -20,6 +20,7 @@
     "axios": "^0.25.0",
     "express": "^4.17.2",
     "express-jwt": "^6.1.0",
+    "heroku": "^7.59.2",
     "joi": "^17.5.0",
     "joi-jwt": "^1.0.1",
     "jsonwebtoken": "^8.5.1",
