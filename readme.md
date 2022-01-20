@@ -20,7 +20,7 @@
     + [Kullancı repolarını getir](#kullanc%C4%B1-repolar%C4%B1n%C4%B1-getir)
     + [Kullancı takipçilerini getir](#kullanc%C4%B1-takip%C3%A7ilerini-getir)
     + [Kullancının takip ettiklerini getir](#kullanc%C4%B1n%C4%B1n-takip-ettiklerini-getir)
-    + [Organizasyon bilgileri getir](n#organizasyon-bilgileri-getir)
+    + [Organizasyon bilgileri getir](#organizasyon-bilgileri-getir)
     + [Organizasyonun repolarını getir](#organizasyonun-repolar%C4%B1n%C4%B1-getir)
   + [OpenSea](#opensea)
     + [Tüm koleksiyonları getir](#t%C3%BCm-koleksiyonlar%C4%B1-getir)
