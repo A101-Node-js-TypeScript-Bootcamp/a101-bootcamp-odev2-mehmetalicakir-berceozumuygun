@@ -53,7 +53,7 @@
 </br></br>
 
 ## API Kullanımı  
-## 1. Trendyol  
+## Trendyol  
 
 > ### Tüm markalar
 
@@ -115,7 +115,7 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 ## Ekstra Eklenen Platformlar
 
-## 2. Github  
+## Github  
 
 > ### Kullancı bilgilerini getir
 
@@ -212,7 +212,7 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 | :-------- | :------- | :-------------------------------- |
 | `organizationName`      | `string` | **Gerekli**. İlgili kullanıcı adı |
 
-## 3. OpenSea 
+## OpenSea 
 
 > ### Tüm koleksiyonları getir
 
@@ -240,13 +240,222 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 | `collectionName`      | `string` | **Gerekli**. İlgili koleksiyon adı |
 
 
+## News API  
+
+> ### Haber kaynaklarını getir
+
+> ### Kullanılabilir Kategoriler:
+> * business
+> * entertainment
+> * general
+> * health
+> * science
+> * sports
+> * technology
+
+```http
+  GET /api/platforms/news/getSources
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+> ### Haber kaynaklarının tüm haberlerini getir
+
+> ### Kullanılabilir Kategoriler:
+> * business
+> * entertainment
+> * general
+> * health
+> * science
+> * sports
+> * technology
+
+
+```http
+  GET /api/platforms/news/getNewsBySource/${source}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `source`      | `string` | **Gerekli**. Haber kaynağının adı |
+
+
+
+> ### Amerika haberlerini kategori bazlı getir
+
+> ### Kullanılabilir Kategoriler:
+> * business
+> * entertainment
+> * general
+> * health
+> * science
+> * sports
+> * technology
+
+
+```http
+  GET /api/platforms/news/getNewsFromUSA/${category}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `category`      | `string` | **Gerekli**. Haber kategorisinin adı |
+
+> ### Büyük Britanya haberlerini kategori bazlı getir
+
+> ### Kullanılabilir Kategoriler:
+> * business
+> * entertainment
+> * general
+> * health
+> * science
+> * sports
+> * technology
+
+
+```http
+  GET /api/platforms/news/getNewsFromGB/${category}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `category`      | `string` | **Gerekli**. Haber kategorisinin adı |
+
+> ### Avustralya haberlerini kategori bazlı getir
+
+> ### Kullanılabilir Kategoriler:
+> * business
+> * entertainment
+> * general
+> * health
+> * science
+> * sports
+> * technology
+
+
+```http
+  GET /api/platforms/news/getNewsFromAustralia/${category}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `category`      | `string` | **Gerekli**. Haber kategorisinin adı |
+
+> ### Rusya haberlerini kategori bazlı getir
+
+> ### Kullanılabilir Kategoriler:
+> * business
+> * entertainment
+> * general
+> * health
+> * science
+> * sports
+> * technology
+
+
+```http
+  GET /api/platforms/news/getNewsFromRussia/${category}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `category`      | `string` | **Gerekli**. Haber kategorisinin adı |
+
+> ### Hindistan haberlerini kategori bazlı getir
+
+> ### Kullanılabilir Kategoriler:
+> * business
+> * entertainment
+> * general
+> * health
+> * science
+> * sports
+> * technology
+
+
+```http
+  GET /api/platforms/news/getNewsFromIndia/${category}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `category`      | `string` | **Gerekli**. Haber kategorisinin adı |
+
+> ### Fransa haberlerini kategori bazlı getir
+
+> ### Kullanılabilir Kategoriler:
+> * business
+> * entertainment
+> * general
+> * health
+> * science
+> * sports
+> * technology
+
+
+```http
+  GET /api/platforms/news/getNewsFromFrance/${category}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `category`      | `string` | **Gerekli**. Haber kategorisinin adı |
+
+
+
 ## Kaynaklar  
 * [NPM-jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)  
 * [NPM-express-jwt](https://www.npmjs.com/package/express-jwt)
 * [Joi.dev](https://joi.dev/api/?v=17.5.0)  
 * [Joi for Node API Schema Validation](https://www.digitalocean.com/community/tutorials/how-to-use-joi-for-node-api-schema-validation)  
-* [Trendyol](https://developers.trendyol.com/tr) 
-* [GitHub](https://api.github.com/) 
-* [OpenSea](https://docs.opensea.io/reference/api-overview)
+* [Trendyol API](https://developers.trendyol.com/tr) 
+* [GitHub API](https://api.github.com/) 
+* [OpenSea API](https://docs.opensea.io/reference/api-overview)
+* [NewsAPI](https://documenter.getpostman.com/view/3479169/Szf7zncp?version=latest#236e4205-de53-41e0-bfc2-f17d396f9741)
 
 
