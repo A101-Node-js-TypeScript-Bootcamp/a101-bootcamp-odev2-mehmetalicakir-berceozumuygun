@@ -2,7 +2,7 @@ const axios = require('axios');
 const url = require('url');
 
 //GET All Collections:
-exports.getAllCollections = async(req,res) => {
+exports.getAllCollections = async() => {
     const response = await axios.get('https://api.opensea.io/api/v1/collections');    
     return response.data;
 }

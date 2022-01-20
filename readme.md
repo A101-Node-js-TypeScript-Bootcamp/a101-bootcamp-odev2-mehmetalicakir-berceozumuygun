@@ -57,24 +57,24 @@
 
 > ### Tüm markalar
 
-```http
+```
   GET /api/platforms/trendyol/getAllBrands
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
+```
   https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getAllBrands
 ```
 
 
 > ### Markayı getir
 
-```http
+```
   GET /api/platforms/trendyol/getBrand/${Marka Adı}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
+```
 https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getBrand/TRENDYOLMİLLA
 ```
 
@@ -85,23 +85,23 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getB
 
 > ### Tüm kategorileri getir
 
-```http
+```
   GET /api/platforms/trendyol/getAllCategories
 ```
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
+```
 https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getAllCategories
 ```
 
 
 > ### Kategoriyi getir
 
-```http
+```
   GET /api/platforms/trendyol/getCategory/${id}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
+```
   https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getCategory/411
 ```
 
@@ -119,13 +119,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 > ### Kullancı bilgilerini getir
 
-```http
+```
   GET /api/platforms/github/getUser/${username}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/github/getUser/mehmetalicakir
 ```
 
 
@@ -135,13 +135,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 > ### Kullancı repolarını getir
 
-```http
+```
   GET /api/platforms/github/getRepos/${username}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/github/getRepos/berceou
 ```
 
 
@@ -151,13 +151,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 > ### Kullancı takipçilerini getir
 
-```http
+```
   GET /api/platforms/github/getFollowers/${username}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/github/getFollowers/mehmetalicakir
 ```
 
 
@@ -167,13 +167,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 > ### Kullancının takip ettiklerini getir
 
-```http
+```
   GET /api/platforms/github/getFollowing/${username}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/github/getFollowing/berceou
 ```
 
 
@@ -183,13 +183,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 > ### Organizasyon bilgileri getir
 
-```http
+```
   GET /api/platforms/github/getOrg/${organizationName}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/github/getOrg/A101-Node-js-TypeScript-Bootcamp
 ```
 
 | Parametre | Tip     | Açıklama                       |
@@ -198,13 +198,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 > ### Organizasyonun repolarını getir
 
-```http
+```
   GET /api/platforms/github/getOrgRepos/${organizationName}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/github/getOrgRepos/A101-Node-js-TypeScript-Bootcamp
 ```
 
 
@@ -216,23 +216,23 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 > ### Tüm koleksiyonları getir
 
-```http
+```
   GET /api/platforms/opensea/getAllCollections
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/opensea/getAllCollections
 ```
 > ### Koleksiyon getir
 
-```http
-  GET /api/platforms/opensea/getSingleCollections/${collectionName}
+```
+  GET /api/platforms/opensea/getSingleCollection/${collectionName}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/opensea/getSingleCollection/doodles-official
 ```
 
 | Parametre | Tip     | Açıklama                       |
@@ -244,49 +244,38 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 > ### Haber kaynaklarını getir
 
-> ### Kullanılabilir Kategoriler:
-> * business
-> * entertainment
-> * general
-> * health
-> * science
-> * sports
-> * technology
-
-```http
+```
   GET /api/platforms/news/getSources
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/news/getSources
 ```
 
 > ### Haber kaynaklarının tüm haberlerini getir
 
-> ### Kullanılabilir Kategoriler:
-> * business
-> * entertainment
-> * general
-> * health
-> * science
-> * sports
-> * technology
+> ### Kullanılabilir Haber Kaynakları:
+> * bbc-news
+> * cnn
+> * fox-news
+> * google-news
 
 
-```http
+
+```
   GET /api/platforms/news/getNewsBySource/${source}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/news/getNewsBySource/cnn
 ```
 
 
 | Parametre | Tip     | Açıklama                       |
 | :-------- | :------- | :-------------------------------- |
-| `source`      | `string` | **Gerekli**. Haber kaynağının adı |
+| `source`      | `string` | **Gerekli**. Haber kaynağının id'si |
 
 
 
@@ -302,13 +291,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 > * technology
 
 
-```http
+```
   GET /api/platforms/news/getNewsFromUSA/${category}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/news/getNewsFromUSA/business
 ```
 
 
@@ -328,13 +317,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 > * technology
 
 
-```http
+```
   GET /api/platforms/news/getNewsFromGB/${category}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/news/getNewsFromGB/entertainment
 ```
 
 
@@ -354,13 +343,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 > * technology
 
 
-```http
+```
   GET /api/platforms/news/getNewsFromAustralia/${category}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/news/getNewsFromAustralia/general
 ```
 
 
@@ -380,13 +369,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 > * technology
 
 
-```http
+```
   GET /api/platforms/news/getNewsFromRussia/${category}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/news/getNewsFromRussia/health
 ```
 
 
@@ -406,13 +395,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 > * technology
 
 
-```http
+```
   GET /api/platforms/news/getNewsFromIndia/${category}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/news/getNewsFromIndia/science
 ```
 
 
@@ -432,13 +421,13 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 > * technology
 
 
-```http
+```
   GET /api/platforms/news/getNewsFromFrance/${category}
 ```
 
 **Kopyalanabilir Postman Örnek Get Sorgusu** 
-```http
-  
+```
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/news/getNewsFromFrance/technology
 ```
 
 
