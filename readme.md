@@ -212,6 +212,32 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 | :-------- | :------- | :-------------------------------- |
 | `organizationName`      | `string` | **Gerekli**. İlgili kullanıcı adı |
 
+## 3. OpenSea 
+
+> ### Tüm koleksiyonları getir
+
+```http
+  GET /api/platforms/opensea/getAllCollections
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+> ### Koleksiyon getir
+
+```http
+  GET /api/platforms/opensea/getSingleCollections/${collectionName}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `collectionName`      | `string` | **Gerekli**. İlgili koleksiyon adı |
 
 
 ## Kaynaklar  
@@ -219,5 +245,8 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 * [NPM-express-jwt](https://www.npmjs.com/package/express-jwt)
 * [Joi.dev](https://joi.dev/api/?v=17.5.0)  
 * [Joi for Node API Schema Validation](https://www.digitalocean.com/community/tutorials/how-to-use-joi-for-node-api-schema-validation)  
-* 
+* [Trendyol](https://developers.trendyol.com/tr) 
+* [GitHub](https://api.github.com/) 
+* [OpenSea](https://docs.opensea.io/reference/api-overview)
+
 
