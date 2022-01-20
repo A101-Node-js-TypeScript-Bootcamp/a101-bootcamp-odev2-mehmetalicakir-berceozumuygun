@@ -1,5 +1,44 @@
 # A101 NodeJS Bootcamp Ödev-2  
 > ## Mehmet Ali Çakır & Berçe Özüm Uyğun  
+
+## İçindekiler
+- [Ödev İsterleri](#%C3%B6dev-i%CC%87sterleri)
+- [Kullanılan Teknolojiler](#kullan%C4%B1lan-teknolojiler)
+- [JWT-Joi Entegrasyonu ve Giriş Süreci](#jwt-joi-entegrasyonu-ve-giri%C5%9F-s%C3%BCreci) 
+- [Error Handler Entegrasyonu](#error-handler-entegrasyonu)
+  + [E-mail Hatası](#e-mail-hatas%C4%B1)
+  + [Parola Hatası](#parola-hatas%C4%B1)
+- [API Kullanımı](#api-kullan%C4%B1m%C4%B1)
+  + [Trendyol](#trendyol)
+    + [Tüm markaları getir](#t%C3%BCm-markalar)
+    + [Markayı getir](#markay%C4%B1-getir)
+    + [Tüm kategorileri getir](#t%C3%BCm-kategorileri-getir)
+    + [Kategoriyi getir](#kategoriyi-getir)
+- [Ekstra Eklenen Platformlar](#ekstra-eklenen-platformlar)
+  + [Github](#github)
+    + [Kullancı bilgilerini getir](#kullanc%C4%B1-bilgilerini-getir)
+    + [Kullancı repolarını getir](#kullanc%C4%B1-repolar%C4%B1n%C4%B1-getir)
+    + [Kullancı takipçilerini getir](#kullanc%C4%B1-takip%C3%A7ilerini-getir)
+    + [Kullancının takip ettiklerini getir](#kullanc%C4%B1n%C4%B1n-takip-ettiklerini-getir)
+    + [Organizasyon bilgileri getir](n#organizasyon-bilgileri-getir)
+    + [Organizasyonun repolarını getir](#organizasyonun-repolar%C4%B1n%C4%B1-getir)
+  + [OpenSea](#opensea)
+    + [Tüm koleksiyonları getir](#t%C3%BCm-koleksiyonlar%C4%B1-getir)
+    + [Koleksiyon getir](#koleksiyon-getir)
+  + [News API](#news-api)
+    + [Haber kaynaklarını getir](#haber-kaynaklar%C4%B1n%C4%B1-getir)
+    + [Haber kaynaklarının tüm haberlerini getir](#haber-kaynaklar%C4%B1n%C4%B1n-t%C3%BCm-haberlerini-getir)
+    + [Amerika haberlerini kategori bazlı getir](#amerika-haberlerini-kategori-bazl%C4%B1-getir)
+    + [Büyük Britanya haberlerini kategori bazlı getir](#b%C3%BCy%C3%BCk-britanya-haberlerini-kategori-bazl%C4%B1-getir)
+    + [Avustralya haberlerini kategori bazlı getir](#avustralya-haberlerini-kategori-bazl%C4%B1-getir)
+    + [Rusya haberlerini kategori bazlı getir](#rusya-haberlerini-kategori-bazl%C4%B1-getir)
+    + [Hindistan haberlerini kategori bazlı getir](#hindistan-haberlerini-kategori-bazl%C4%B1-getir)
+    + [Fransa haberlerini kategori bazlı getir](#fransa-haberlerini-kategori-bazl%C4%B1-getir)
+- [Kaynaklar](#kaynaklar)
+
+
+
+
 ## Ödev İsterleri 
 - Node.js Boiler Plate  
     + JWT entegrasyonu  
@@ -55,7 +94,7 @@
 ## API Kullanımı  
 ## Trendyol  
 
-> ### Tüm markalar
+> ### Tüm markaları getir
 
 ```
   GET /api/platforms/trendyol/getAllBrands
