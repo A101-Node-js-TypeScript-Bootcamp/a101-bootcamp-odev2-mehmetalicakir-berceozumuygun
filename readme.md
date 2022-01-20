@@ -18,7 +18,7 @@
 <code><a target="_blank"><img height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png"></a></code>
 <code><a target="_blank"><img height="50" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Postman_%28software%29.png"></a></code>  
 
-</br></br></br>
+</br></br>
 
 
 ## JWT-Joi Entegrasyonu ve Giriş Süreci  
@@ -61,11 +61,23 @@
   GET /api/platforms/trendyol/getAllBrands
 ```
 
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getAllBrands
+```
+
+
 > ### Markayı getir
 
 ```http
   GET /api/platforms/trendyol/getBrand/${Marka Adı}
 ```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getBrand/TRENDYOLMİLLA
+```
+
 
 | Parametre | Tip     | Açıklama                       |
 | :-------- | :------- | :-------------------------------- |
@@ -76,16 +88,129 @@
 ```http
   GET /api/platforms/trendyol/getAllCategories
 ```
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getAllCategories
+```
+
+
 > ### Kategoriyi getir
 
 ```http
   GET /api/platforms/trendyol/getCategory/${id}
 ```
 
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getCategory/411
+```
+
 | Parametre | Tip     | Açıklama                       |
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `number` | **Gerekli**. İlgili kategorinin idsi |
 
+
+</br></br>
+
+
+## Ekstra Eklenen Platformlar
+
+## 2. Github  
+
+> ### Kullancı bilgilerini getir
+
+```http
+  GET /api/platforms/github/getUser/${username}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `username`      | `string` | **Gerekli**. İlgili kullanıcı adı |
+
+> ### Kullancı repolarını getir
+
+```http
+  GET /api/platforms/github/getRepos/${username}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `username`      | `string` | **Gerekli**. İlgili kullanıcı adı |
+
+> ### Kullancı takipçilerini getir
+
+```http
+  GET /api/platforms/github/getFollowers/${username}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `username`      | `string` | **Gerekli**. İlgili kullanıcı adı |
+
+> ### Kullancının takip ettiklerini getir
+
+```http
+  GET /api/platforms/github/getFollowing/${username}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `username`      | `string` | **Gerekli**. İlgili kullanıcı adı |
+
+> ### Organizasyon bilgileri getir
+
+```http
+  GET /api/platforms/github/getOrg/${organizationName}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `organizationName`      | `string` | **Gerekli**. İlgili kullanıcı adı |
+
+> ### Organizasyonun repolarını getir
+
+```http
+  GET /api/platforms/github/getOrgRepos/${organizationName}
+```
+
+**Kopyalanabilir Postman Örnek Get Sorgusu** 
+```http
+  
+```
+
+
+| Parametre | Tip     | Açıklama                       |
+| :-------- | :------- | :-------------------------------- |
+| `organizationName`      | `string` | **Gerekli**. İlgili kullanıcı adı |
 
 
 
