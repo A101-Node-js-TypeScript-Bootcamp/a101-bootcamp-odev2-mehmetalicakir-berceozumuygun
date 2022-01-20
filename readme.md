@@ -1,5 +1,5 @@
 # A101 NodeJS Bootcamp Ödev-2  
-> ## Mehmet Ali Çakır & Berçe Özüm Uyğun  
+> ## [Mehmet Ali Çakır](https://github.com/mehmetalicakir) & [Berçe Özüm Uyğun](https://github.com/berceou) 
 
 ## İçindekiler
 - [Ödev İsterleri](#%C3%B6dev-i%CC%87sterleri)
@@ -36,19 +36,18 @@
     + [Fransa haberlerini kategori bazlı getir](#fransa-haberlerini-kategori-bazl%C4%B1-getir)
 - [Kaynaklar](#kaynaklar)
 
-
-
+</br>
 
 ## Ödev İsterleri 
 - Node.js Boiler Plate  
     + JWT entegrasyonu  
-    + JWT sign etmeden önce joi.js validasyon  
+    + JWT sign etmeden önce **joi** validasyon işlemleri  
     + Trendyol markalar "GET" endpointi  
         + Bu endpoint'e id veya name ile query params eklemek  
-    + Trendyol kategoriler "GET" endpointi  
-    + Trendyol single kategori "GET" endpointi  
-    + Error-Handler entegrasyonu   
-
+    + Trendyol kategoriler **"GET"** endpointi  
+    + Trendyol single kategori **"GET"** endpointi  
+    + Error-Handler entegrasyonu  
+</br> 
 ## Kullanılan Teknolojiler  
 
 <code><a target="_blank"><img height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png"></a></code>
@@ -57,12 +56,62 @@
 <code><a target="_blank"><img height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png"></a></code>
 <code><a target="_blank"><img height="50" src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Postman_%28software%29.png"></a></code>  
 
-</br></br>
+</br>
 
 
-## JWT-Joi Entegrasyonu ve Giriş Süreci  
+## JWT Entegrasyonu ve JOI Validasyonu  
 
-> Canlı olarak test edebilmek için "sitelinki" 'ne aşağıdaki standartı kullanarak POST isteği atabilirsiniz  
+> ### JSON Web Token (JWT) 
+
+JSON Web Token *(JWT)*, iletişim yapan birimler arasındaki veri alışverişinin güvenli bir şekilde sağlanması için **token** kullanarak bilginin kendini kendini betimlediği bir yol sunan endüstri standardıdır. Oluşturulan token, dijital olarak imzalandığı için doğrulanabilir ve güvenilirdir.
+
+Kimliklendirme işlemlerinde, kullanıcı kendi kimlik bilgileriyle başarılı bir şekilde giriş yaptığında, geriye bir **JWT** döndürülür ve tekrar kullanılmak üzere localStorage veya cookies gibi yapılarda JWT saklanır. Sunucudaki kaynağa erişim izni JWT’nin geçerliliği ile kontrol edilir. Eğer geçerli ise, erişim izni verilir. JWT’ler kendi kendini betimledikleri için, bütün gerekli bilgi JWT’nin içerisindedir.
+
+Kullanıcı korunmuş bir kaynağa erişmek istediğinde, istemci tarafından *Authorization* başlığı içerisinde *Bearer* şeması kullanılarak JWT sunucuya iletilmelidir. Aşağıdaki diyagramda JWT işleyişi gösterilmiştir.
+
+![JWT-diagram](/img/jwt-diagram.png)
+
+> ### JOI
+Gelen isteklerin doğrulama işlemlerini yapabilmek için *express-validation* ve *express-validator* kullanılabilir.  
+- Express-validation>Doğrulama için "joi" paketi kullanılmalıdır.
+- Express-validator>Doğrulama için "validator" paketi kullanılmalıdır.
+
+>Ödev isteri **joi** olduğu için, validasyon işlemi için joi kullanılmıştır.
+
+```
+const Joi = require('joi');
+const schema = Joi.object({
+    username: Joi.string()
+        .alphanum()
+        .min(3)
+        .max(30)
+        .required(),
+
+    email: Joi.string()
+        .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
+})
+``` 
+Yukarıdaki kod betiği gibi bir işlem yapıldığında;
+- ```username```:
+  + En az 3, en fazla 30 karakterden oluşması
+  + String ve alfabetik karakterleri içeriyor olması
+- ```email```:
+  + Geçerli bir email adresi olması
+  + İkili etki alanına sahip olması örneğin: ```örnek.com```
+  + Üst düzey domain *(TLD)* mutlaka ```.com``` ya da ```.net``` içeriyor olması
+  beklenmektedir.  
+
+***Not:*** Kullanıcının boş geçmesini istemediğimiz alanlara ```require()``` eklemeliyiz.
+
+<br/>
+
+Ödev içeriğinde joi validasyonu kullanarak;
+  + şifre: en az 6 karakter, en fazla ise 16 karakter
+  + email formatı: ```name@surname.com```  
+
+  şeklinde tanımlanmıştır.
+
+> Canlı olarak test edebilmek için [linke]( https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/user/register) aşağıdaki standartı kullanarak POST isteği atabilirsiniz  
 ```
 {
     "email": "name@surname.com",
@@ -71,13 +120,15 @@
 ```  
 ![token-verildi](/img/token_register.png)  
 
->***NOT:*** Token girişi yapılmadığı sürece diğer istekler çalışmamaktadır.  
+***NOT:*** Token girişi yapılmadığı sürece diğer istekler çalışmamaktadır.  
 
-> Verilen TOKEN'ı postman üzerinden Authorization>Bearer Token kısmına eklenmelidir.  
+> Verilen TOKEN'ı postman üzerinden ```Authorization>Bearer Token``` kısmına eklenmelidir.  
 
 ![token-girildi](/img/bearerToken_register.png)  
 
 ## Error Handler Entegrasyonu  
+
+Error Handling, senkron ve asenkron olarak meydana gelen hataların **Express** tarafından nasıl yakalandığı ve işlendiği ile alakalıdır. ExpressJS varsayılan olarak bir hata işleyiciyle gelir. Senkron kodda oluşan hataları yakalamak için ek bir şey yapılmasına gerek yoktur. Fakat asenkron kodlarda dönebilecek hataları Express'in yakalayıp işlemesi için ```next()``` fonksiyonuna verilmesi gerekir.
 
 ### E-mail Hatası   
 > İstenen e-mail standartlarında giriş yapılmadığında aşağıdaki hata ile karşılaşılmaktadır.  
@@ -93,7 +144,7 @@
 
 ## API Kullanımı  
 ## Trendyol  
-
+API kullanımı için [Trendyol dökümantasyonu](https://developers.trendyol.com/tr) kullanılmıştır.
 > ### Tüm markaları getir
 
 ```
@@ -154,8 +205,9 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 ## Ekstra Eklenen Platformlar
 
+Ödev isterisinde bulunmasa da kalan vakitten dolayı ekip olarak pratik yapmak amacıyla *ek platformlar* bulunarak benzer **"GET"** işlemleri de ödeve eklenmiştir. Bu kısımlar ödev zorunluluğunu kapsamamaktadır.
 ## Github  
-
+API kullanımı için [GitHub dökümantasyonu](https://api.github.com/) kullanılmıştır.
 > ### Kullancı bilgilerini getir
 
 ```
@@ -252,7 +304,7 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 | `organizationName`      | `string` | **Gerekli**. İlgili kullanıcı adı |
 
 ## OpenSea 
-
+API kullanımı için [OpenSea dökümantasyonu](https://docs.opensea.io/reference/api-overview) kullanılmıştır.
 > ### Tüm koleksiyonları getir
 
 ```
@@ -280,7 +332,7 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 
 ## News API  
-
+API kullanımı için [News dökümantasyonu](https://documenter.getpostman.com/view/3479169/Szf7zncp?version=latest#236e4205-de53-41e0-bfc2-f17d396f9741) kullanılmıştır.
 > ### Haber kaynaklarını getir
 
 ```
@@ -477,13 +529,15 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/trendyol/getA
 
 
 ## Kaynaklar  
-* [NPM-jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)  
-* [NPM-express-jwt](https://www.npmjs.com/package/express-jwt)
+* [NPM/jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken)  
+* [NPM/express-jwt](https://www.npmjs.com/package/express-jwt)
 * [Joi.dev](https://joi.dev/api/?v=17.5.0)  
+* [JWT Standartı](https://devnot.com/2017/json-web-token-jwt-standardi/)
 * [Joi for Node API Schema Validation](https://www.digitalocean.com/community/tutorials/how-to-use-joi-for-node-api-schema-validation)  
+* [Error Handling](https://expressjs.com/tr/guide/error-handling.html) 
 * [Trendyol API](https://developers.trendyol.com/tr) 
 * [GitHub API](https://api.github.com/) 
 * [OpenSea API](https://docs.opensea.io/reference/api-overview)
-* [NewsAPI](https://documenter.getpostman.com/view/3479169/Szf7zncp?version=latest#236e4205-de53-41e0-bfc2-f17d396f9741)
+* [News API](https://documenter.getpostman.com/view/3479169/Szf7zncp?version=latest#236e4205-de53-41e0-bfc2-f17d396f9741)
 
 
