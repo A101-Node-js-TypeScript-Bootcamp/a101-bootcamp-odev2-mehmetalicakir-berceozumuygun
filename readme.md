@@ -111,7 +111,11 @@ Yukarıdaki kod betiği gibi bir işlem yapıldığında;
 
   şeklinde tanımlanmıştır.
 
-> Canlı olarak test edebilmek için [linke]( https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/platforms/user/register) aşağıdaki standartı kullanarak POST isteği atabilirsiniz  
+```
+https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/user/register
+```
+
+> Canlı olarak test edebilmek için yukarıdaki adrese aşağıdaki standartı kullanarak POST isteği atabilirsiniz  
 ```
 {
     "email": "name@surname.com",
@@ -122,7 +126,7 @@ Yukarıdaki kod betiği gibi bir işlem yapıldığında;
 
 ***NOT:*** Token girişi yapılmadığı sürece diğer istekler çalışmamaktadır.  
 
-> Verilen TOKEN'ı postman üzerinden ```Authorization>Bearer Token``` kısmına eklenmelidir.  
+> Verilen TOKEN'ı Postman uygulaması üzerinden ```Authorization>Bearer Token``` kısmına ekleyebilirsiniz.  
 
 ![token-girildi](/img/bearerToken_register.png)  
 
