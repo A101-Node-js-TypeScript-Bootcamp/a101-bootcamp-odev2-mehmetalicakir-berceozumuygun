@@ -72,34 +72,28 @@ Kullanıcı korunmuş bir kaynağa erişmek istediğinde, istemci tarafından *A
 ![JWT-diagram](/img/jwt-diagram.png)
 
 > ### JOI
-Gelen isteklerin doğrulama işlemlerini yapabilmek için *express-validation* ve *express-validator* kullanılabilir.  
-- Express-validation>Doğrulama için "joi" paketi kullanılmalıdır.
-- Express-validator>Doğrulama için "validator" paketi kullanılmalıdır.
 
->Ödev isteri **joi** olduğu için, validasyon işlemi için joi kullanılmıştır.
+Gelen kullanıcı girişlerinin kontrol işlemlerini yapabilmek için *joi* paketi kullanılmaktadır.
 
 ```
 const Joi = require('joi');
 const schema = Joi.object({
-    username: Joi.string()
-        .alphanum()
-        .min(3)
-        .max(30)
-        .required(),
-
     email: Joi.string()
-        .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } })
+        .email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
+
+    password: Joi.string()
+        .pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')),
 })
 ``` 
 Yukarıdaki kod betiği gibi bir işlem yapıldığında;
-- ```username```:
-  + En az 3, en fazla 30 karakterden oluşması
-  + String ve alfabetik karakterleri içeriyor olması
 - ```email```:
   + Geçerli bir email adresi olması
   + İkili etki alanına sahip olması örneğin: ```örnek.com```
-  + Üst düzey domain *(TLD)* mutlaka ```.com``` ya da ```.net``` içeriyor olması
-  beklenmektedir.  
+  + Üst düzey domain *(TLD)* mutlaka ```.com``` ya da ```.net``` içeriyor olması beklenmektedir.
+
+- ```password```:
+  + Belirtilen regex desenini karşılaması
+  + String ve alfabetik karakterleri içeriyor olması beklenmektedir.
 
 ***Not:*** Kullanıcının boş geçmesini istemediğimiz alanlara ```require()``` eklemeliyiz.
 
@@ -109,13 +103,14 @@ Yukarıdaki kod betiği gibi bir işlem yapıldığında;
   + şifre: en az 6 karakter, en fazla ise 16 karakter
   + email formatı: ```name@surname.com```  
 
-  şeklinde tanımlanmıştır.
+  şeklinde tanımlanmıştır.  
+  </br>
 
+> Canlı olarak test edebilmek için,  
 ```
 https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/user/register
 ```
-
-> Canlı olarak test edebilmek için yukarıdaki adrese aşağıdaki standartı kullanarak POST isteği atabilirsiniz  
+>adresine aşağıdaki standartı kullanarak POST isteği atabilirsiniz.  
 ```
 {
     "email": "name@surname.com",
