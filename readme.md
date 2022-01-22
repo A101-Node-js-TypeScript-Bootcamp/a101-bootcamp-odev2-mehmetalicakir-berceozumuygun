@@ -47,7 +47,9 @@
     + Trendyol kategoriler **"GET"** endpointi  
     + Trendyol single kategori **"GET"** endpointi  
     + Error-Handler entegrasyonu  
-</br> 
+
+</br>  
+
 ## Kullanılan Teknolojiler  
 
 <code><a target="_blank"><img height="50" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png"></a></code>
@@ -124,6 +126,8 @@ https://patika-a101bc-g12-api.mehmetalicakir.repl.co/api/user/register
 > Verilen TOKEN'ı Postman uygulaması üzerinden ```Authorization>Bearer Token``` kısmına ekleyebilirsiniz.  
 
 ![token-girildi](/img/bearerToken_register.png)  
+
+</br>  
 
 ## Error Handler Entegrasyonu  
 
